@@ -1,0 +1,82 @@
+body{
+    margin: 20px;
+    background-color: rgb(200, 219, 148);
+}
+#anim-1{
+    height: 180px;
+    width: 180px;
+    background-color: rgb(240, 57, 44);
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    transform: translateX(100px) translateY(200px); 
+    animation: loop1 5s ease-in  100 reverse;
+    animation-direction: reverse;
+}
+#anim-1:hover{
+     animation-play-state: inherit;
+     border-radius: 80px;
+}
+@keyframes loop1{
+    0%{
+        background-color: rgb(0, 204, 255);
+        transform: translateX(1000px) ;
+    }
+    100%{
+        background-color: rgb(0, 47, 255);
+        transform: translateY(0) ;
+    }
+}
+
+ #anim-2{
+    height: 190px;
+    width: 190px;
+    background-color: rgb(210, 0, 252);
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    transform: translateX(40px) translateY(-30px); 
+    animation: loop2 4s ease-out  infinite alternate;
+    animation-direction: alternate;
+}
+#anim-2:hover{
+    animation-play-state: paused;
+    border-radius: 50%;
+}
+
+@keyframes loop2{
+    0%{
+        background-color: rgb(75, 139, 10);
+        transform: rotateX(0deg) ;
+    }
+    100%{
+        background-color: rgb(145, 23, 23);
+        transform: rotateX(360deg) ;
+    }
+}
+
+#anim-3{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(252, 235, 0);
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    transform: translateX(0px) translateY(-1000px);
+    animation: loop3 4s ease-in-out  50 forwards;
+    animation-direction: alternate-reverse;
+}
+#anim-3:hover{
+    animation-play-state: running;
+    border: 10px solid black;
+}
+@keyframes loop3{
+    0%{
+        background-color: rgb(211, 112, 0);
+        transform: rotateY(360deg) ;
+    }
+    100%{
+        background-color: rgb(106, 74, 223);
+        transform: rotateY(0deg) ;
+    }
+} 
